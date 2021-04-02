@@ -1,8 +1,8 @@
 {{ config(
     materialized = 'incremental',
     unique_key = 'page_view_id',
-    sort = 'tstamp',
-    dist = 'page_view_id'
+    incremental_strategy='merge',
+    file_format='delta'
     )}}
 
 {#

@@ -1,8 +1,8 @@
 {{ config(
     materialized = 'incremental',
     unique_key = 'session_id',
-    sort = 'session_start_tstamp',
-    dist = 'session_id'
+    incremental_strategy='merge',
+    file_format='delta'
     )}}
 
 {% set partition_by = "partition by session_id" %}

@@ -2,8 +2,8 @@
 {{ config(
     materialized = 'incremental',
     unique_key = 'session_id',
-    sort = 'session_start_tstamp',
-    dist = 'session_id'
+    incremental_strategy='merge',
+    file_format='delta'
     )}}
 
 {% set sessionization_cutoff %}
