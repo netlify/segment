@@ -126,7 +126,7 @@ session_ids as (
     --This CTE assigns a globally unique session id based on the combination of
     --`anonymous_id` and `session_number`.
 
-    select
+    select distinct
 
         {{dbt_utils.star(ref('segment_web_page_views'))}},
         page_view_number,
