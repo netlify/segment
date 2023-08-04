@@ -1,7 +1,7 @@
 # dbt-segment
 This [dbt package](https://docs.getdbt.com/docs/package-management):
 * Performs "user stitching" to tie all events associated with a cookie to the same user_id
-* Transforms pageviews into sessions ("sessionization")
+* Transforms pageviews into session ("sessionization")
 
 
 ## Installation instructions
